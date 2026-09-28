@@ -1,3 +1,5 @@
+<p align="center"><img src="rightdrag.png" alt="RightDrag icon" width="160"></p>
+
 # RightDrag
 
 Drag any window by its title bar with the **right** mouse button, and it moves without coming to the front.
