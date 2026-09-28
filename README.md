@@ -44,3 +44,7 @@ If an `app.ico` is present, `build.cmd` embeds it as the program icon.
 ## Credits
 
 Written by Tim Alston and Claude (Anthropic). Inspired by Acorn RISC OS.
+
+## License
+
+[MIT](LICENSE) © 2026 Tim Alston

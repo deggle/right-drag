@@ -365,7 +365,7 @@ static class RightDrag
             "Inspired by the Adjust-drag of Acorn RISC OS.",
             "",
             "Written by Tim Alston and Claude (Anthropic).",
-            Attr<AssemblyCopyrightAttribute>().Copyright + ". All rights reserved."
+            Attr<AssemblyCopyrightAttribute>().Copyright + ". Released under the MIT License."
         };
         foreach (string line in lines)
         {
