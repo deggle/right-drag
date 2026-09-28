@@ -14,6 +14,8 @@ Acorn's RISC OS had this from the start. Its mouse had three buttons: *Select*, 
 
 Download `RightDrag.exe` from the [latest release](https://github.com/deggle/right-drag/releases/latest) and run it. It sits in the notification area (system tray) and needs no installation.
 
+> **Windows protected your PC?** RightDrag isn't code-signed, so Windows SmartScreen may warn you the first time you run it. Click **More info → Run anyway**. If you'd rather not trust a downloaded `.exe`, you can [build it yourself](#building) from the source in a few seconds.
+
 - **Right-drag a title bar:** moves the window without activating it or changing its z-order.
 - **Right-click a title bar without dragging:** works as normal, so the window menu and things like the browser tab-strip menu still appear.
 - **Right-drag a maximised window:** restores it to normal size under the cursor, like a normal drag.
