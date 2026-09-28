@@ -1,0 +1,3 @@
+# Build output - attach RightDrag.exe to a GitHub release instead of committing it
+*.exe
+*.pdb
