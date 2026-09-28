@@ -10,7 +10,7 @@ Acorn's RISC OS had this from the start. Its mouse had three buttons: *Select*, 
 
 ## Using it
 
-Run `RightDrag.exe`. It sits in the notification area (system tray) and needs no installation.
+Download `RightDrag.exe` from the [latest release](https://github.com/deggle/right-drag/releases/latest) and run it. It sits in the notification area (system tray) and needs no installation.
 
 - **Right-drag a title bar:** moves the window without activating it or changing its z-order.
 - **Right-click a title bar without dragging:** works as normal, so the window menu and things like the browser tab-strip menu still appear.
@@ -33,6 +33,13 @@ build.cmd
 ```
 
 If an `app.ico` is present, `build.cmd` embeds it as the program icon.
+
+GitHub Actions builds it on every push. To publish a release, update the version in `RightDrag.cs`, commit, then push a matching tag:
+
+```
+git tag v1.0.0
+git push origin v1.0.0
+```
 
 ## How it works
 

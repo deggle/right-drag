@@ -1,0 +1,36 @@
+name: Build
+
+# Every push and pull request builds RightDrag.exe and keeps it as a downloadable workflow artifact.
+# Pushing a tag like v1.0.0 also creates a GitHub Release with RightDrag.exe attached.
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        shell: cmd
+        run: build.cmd
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: RightDrag
+          path: RightDrag.exe
+
+      - name: Create release
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$env:GITHUB_REF_NAME" RightDrag.exe --title "RightDrag $env:GITHUB_REF_NAME" --generate-notes
